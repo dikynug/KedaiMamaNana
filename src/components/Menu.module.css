@@ -49,6 +49,12 @@
   max-width: 1200px;
 }
 
+@media (max-width: 1140px) {
+  .menuscroll {
+    justify-content: flex-start;
+  }
+}
+
 /* Custom scrollbar for horizontal menu scroll */
 .menuscroll::-webkit-scrollbar {
   height: 6px;
@@ -300,6 +306,7 @@
     box-sizing: border-box;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    display: block;
   }
 
   .menuscroll::-webkit-scrollbar {
