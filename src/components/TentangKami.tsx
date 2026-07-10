@@ -1,12 +1,13 @@
 import { motion, type Variants } from "framer-motion";
+import useIsMobile from "../hooks/useIsMobile";
 import styles from "./TentangKami.module.css";
-import fototentang from "../assets/FotoTentang.png";
+import fototentang from "../assets/LogoHD.png";
 import cabe from "../assets/Cabe.svg";
 import duit from "../assets/Duit.svg";
 import mangkok from "../assets/Mangkok.svg";
 
 // ── Reusable animation variants ──────────────────────────────────────────────
-
+// ... (previous motion variants remain unchanged)
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 60 },
   visible: (delay = 0) => ({
@@ -53,6 +54,8 @@ const viewport = { once: true, amount: 0.25 };
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function TentangKami() {
+  const isMobile = useIsMobile();
+
   const icons = [
     {
       src: cabe,
@@ -77,9 +80,31 @@ export default function TentangKami() {
     },
   ];
 
+  if (isMobile) {
+    return (
+      <div className={styles.tentangkami}>
+        <motion.div
+          className={styles.tentangcard}
+          initial={{ opacity: 0, y: 50, x: "-50%" }}
+          whileInView={{ opacity: 1, y: 0, x: "-50%" }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <img className={styles.fototentangIcon} src={fototentang} alt="Foto Tentang Kami" />
+          <b className={styles.seblakPrasmananMama}>Seblak Prasmanan Mama Nana</b>
+          <div className={styles.seblakPrasmananDengan}>
+            Seblak prasmanan dengan pilihan toping lengkap, kuah gurih nikmat,
+            dan dengan harga yang ramah di kantong. Cocok buat semua selera!
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.tentangkami}>
       <div className={styles.tentangcard}>
+
         {/* ── Kiri: Foto ─────────────────────────────────────────────── */}
         <motion.div
           className={styles.tentangkiri}

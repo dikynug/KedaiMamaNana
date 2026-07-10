@@ -1,4 +1,5 @@
 import { motion, type Variants } from "framer-motion";
+import useIsMobile from "../hooks/useIsMobile";
 import styles from "./Menu.module.css";
 import seblak from "../assets/MenuSeblak.png";
 import kwetiau from "../assets/MenuKwetiau.png";
@@ -12,7 +13,7 @@ import galeri4 from "../assets/galeri4.png";
 import galeri5 from "../assets/galeri5.png";
 
 // ── Animation variants ────────────────────────────────────────────────────────
-
+// ... (previous animation variants and variables remain unchanged)
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: (delay = 0) => ({
@@ -110,8 +111,94 @@ const galeriImages = [
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function Menu() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <div className={styles.menu}>
+        <div className={styles.menucontent}>
+          <motion.div
+            className={styles.menu2}
+            initial={{ opacity: 0, y: 25, x: "-50%" }}
+            whileInView={{ opacity: 1, y: 0, x: "-50%" }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            Menu
+          </motion.div>
+          <div className={styles.menuscroll}>
+            <div className={styles.menulist}>
+              <motion.div
+                className={styles.menucardseblak}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+              >
+                <img className={styles.menuseblakIcon} src={seblak} alt="Seblak Prasmanan" />
+                <div className={styles.menucardseblakChild} />
+                <div className={styles.seblakPrasmanan}>Seblak Prasmanan</div>
+                <div className={styles.toppingStartFrom}>
+                  Topping start from 1K-5k
+                  <br />
+                  Bumbu start from 1k-3K
+                </div>
+              </motion.div>
+              <motion.div
+                className={styles.menucardseblak}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.8, delay: 0.25 }}
+              >
+                <img className={styles.menuseblakIcon} src={kwetiau} alt="Kwetiau" />
+                <div className={styles.menucardseblakChild} />
+                <div className={styles.seblakPrasmanan}>Kwetiau</div>
+                <div className={styles.k}>12k</div>
+              </motion.div>
+              <motion.div
+                className={styles.menucardseblak}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <img className={styles.menuseblakIcon} src={minum} alt="Minuman Es" />
+                <div className={styles.menucardseblakChild} />
+                <div className={styles.seblakPrasmanan}>Minuman Es</div>
+                <div className={styles.k}>2k</div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.lokasi}>
+          <motion.div
+            className={styles.lokasi2}
+            initial={{ opacity: 0, y: 25, x: "-50%" }}
+            whileInView={{ opacity: 1, y: 0, x: "-50%" }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            Lokasi
+          </motion.div>
+          <motion.img
+            className={styles.fotogmapsIcon}
+            src={gmaps}
+            onClick={map}
+            alt="Lokasi"
+            initial={{ opacity: 0, scale: 0.95, y: 35, x: "-50%" }}
+            whileInView={{ opacity: 1, scale: 1, y: 0, x: "-50%" }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.8, delay: 0.15 }}
+          />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.menu}>
+
       {/* ══ Bagian Menu ═════════════════════════════════════════════════════ */}
       <div className={styles.menulist}>
         <motion.div

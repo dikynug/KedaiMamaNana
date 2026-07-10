@@ -41,6 +41,7 @@
   background-color: var(--primary-red);
   display: flex;
   align-items: stretch;
+  justify-content: center;
   padding: 3.5rem 3rem;
   box-sizing: border-box;
   gap: 2.5rem;
@@ -79,7 +80,7 @@
   flex-direction: column;
   background-color: var(--neutral-white);
   transition: transform 0.3s var(--ease-elastic),
-              box-shadow var(--transition-smooth);
+    box-shadow var(--transition-smooth);
 }
 
 .menucardseblak:hover {
@@ -230,8 +231,8 @@
   cursor: pointer;
   position: relative;
   transition: transform 0.3s var(--ease-elastic),
-              filter var(--transition-fast),
-              box-shadow var(--transition-fast);
+    filter var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .fotogaleriChild:hover,
@@ -244,4 +245,211 @@
   filter: brightness(1.05);
   box-shadow: var(--shadow-md);
   z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    width: 100%;
+    height: 1010px;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    color: #9f031c;
+    font-family: Poppins;
+    display: block;
+  }
+
+  .menucontent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    width: 100%;
+    height: 505px;
+  }
+
+  .menu2 {
+    position: absolute;
+    top: 43px;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 161px;
+    height: 38px;
+  }
+
+  .menuscroll {
+    position: absolute;
+    top: 75px;
+    left: 0px;
+    width: 100%;
+    height: 430px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: left;
+    font-size: 14px;
+    color: #39010a;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .menuscroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menulist {
+    display: flex;
+    align-items: center;
+    padding: 50px calc(50% - 130px);
+    gap: 20px;
+    flex-shrink: 0;
+    flex-direction: row;
+    width: max-content;
+    min-height: 100%;
+    box-sizing: content-box;
+  }
+
+  .menucardseblak {
+    bottom: 20px;
+    height: 330px;
+    width: 260px;
+    position: relative;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border: 2px solid #9f031c;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: block;
+    background-color: #fff;
+  }
+
+  .menucardseblak:hover {
+    transform: none;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .menuseblakIcon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 260px;
+    height: 230px;
+    object-fit: cover;
+    transform: none !important;
+  }
+
+  .menucardseblak:hover .menuseblakIcon {
+    transform: none !important;
+  }
+
+  .menucardseblakChild {
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    background-color: #f6f6f6;
+    width: 260px;
+    height: 100px;
+  }
+
+  .seblakPrasmanan {
+    position: absolute;
+    top: 230px;
+    left: 14px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 233px;
+    height: 42px;
+    font-size: 14px;
+    color: #39010a;
+  }
+
+  .toppingStartFrom {
+    position: absolute;
+    top: 265px;
+    left: 14px;
+    font-size: 10px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 233px;
+    height: 60px;
+    color: #666666;
+    line-height: normal;
+  }
+
+  .k {
+    position: absolute;
+    top: 265px;
+    left: 14px;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 233px;
+    height: 60px;
+    color: #9f031c;
+  }
+
+  .lokasi {
+    position: absolute;
+    top: 505px;
+    left: 0px;
+    background-color: #fff;
+    width: 100%;
+    height: 505px;
+    overflow: hidden;
+    display: block;
+  }
+
+  .lokasi2 {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 161px;
+    height: 38px;
+    color: #9f031c;
+  }
+
+  .fotogmapsIcon {
+    position: absolute;
+    top: 124px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+    width: 317px;
+    max-width: 90%;
+    height: 258px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .fotogmapsIcon:hover {
+    transform: translateX(-50%) translateY(-5px) scale(1.02);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  }
 }

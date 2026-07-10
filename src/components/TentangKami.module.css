@@ -175,3 +175,70 @@
   grid-column: 3;
   grid-row: 2;
 }
+
+@media (max-width: 767px) {
+  .tentangkami {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-color: #9f031c;
+    text-align: left;
+    font-size: 20px;
+    color: #39010a;
+    font-family: Poppins;
+    padding: 0;
+    display: block;
+  }
+  .tentangcard {
+    position: absolute;
+    top: 114px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    background-color: #fff;
+    width: 287px;
+    height: 372px;
+    padding: 0;
+    box-shadow: none;
+    display: block;
+  }
+  .fototentangIcon {
+    position: absolute;
+    top: 17px;
+    left: 59px;
+    width: 169px;
+    height: 169px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .fototentangIcon:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .seblakPrasmananMama {
+    position: absolute;
+    top: 186px;
+    left: 15px;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    display: inline-block;
+    width: 212px;
+    height: 49px;
+    line-height: normal;
+  }
+  .seblakPrasmananDengan {
+    position: absolute;
+    top: 266px;
+    left: 15px;
+    font-size: 10px;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+    color: #000;
+    text-align: justify;
+    display: inline-block;
+    width: 257px;
+    height: 71px;
+    line-height: normal;
+  }
+}

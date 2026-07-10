@@ -29,12 +29,13 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--primary-red) rgba(0, 0, 0, 0.05);
+  background-color: var(--primary-red);
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--neutral-light);
+  background-color: var(--primary-red);
   color: var(--neutral-dark);
   font-family: var(--font-main);
   line-height: 1.6;

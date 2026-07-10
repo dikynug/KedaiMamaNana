@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import useIsMobile from "../hooks/useIsMobile";
 import styles from "./Kontak.module.css";
 import ig from "../assets/InstaIcon.svg";
 import cell from "../assets/PhoneIcon.svg";
@@ -5,6 +7,8 @@ import logomini from "../assets/LogoMini.png";
 import logo from "../assets/Logo.png";
 
 export default function Kontak() {
+  const isMobile = useIsMobile();
+
   const openWA = () => {
     window.open("https://wa.link/pvjjjk", "_blank");
   };
@@ -15,6 +19,35 @@ export default function Kontak() {
   const openDiky = () => {
     window.open("https://www.instagram.com/nug.dik/", "_blank");
   };
+
+  if (isMobile) {
+    return (
+      <motion.div
+        className={styles.kontak}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className={styles.jamOperasionalSetiapContainer}>
+          <b>Jam Operasional<br/></b>
+          <span className={styles.ggPuskesmasSido}>Setiap Hari <br/>13.00 - 21.00</span>
+        </div>
+        <div className={styles.alamatGgPuskesmasContainer}>
+          <b>Alamat<br/></b>
+          <span className={styles.ggPuskesmasSido}>Gg. Puskesmas, Sido Mulyo, Kec. Gading Cemp., Kota Bengkulu, Bengkulu 38211</span>
+        </div>
+        <img className={styles.logoIcon} src={logo} alt="Logo" />
+        <div className={styles.kedaimamanana} onClick={openIG}>@kedaimamanana</div>
+        <div className={styles.div} onClick={openWA}>0895 3448 81137</div>
+        <img className={styles.phoneicon} src={cell} alt="Phone" onClick={openWA} />
+        <img className={styles.instaicon} src={ig} alt="Instagram" onClick={openIG} />
+        <img className={styles.logominiIcon} src={logomini} alt="Logo Mini" />
+        <div className={styles.kedaiMamaNana}>© 2026 Kedai Mama Nana. All rights reserved.</div>
+      </motion.div>
+    );
+  }
+
 
   return (
     <div className={styles.kontak}>
