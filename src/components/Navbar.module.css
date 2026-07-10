@@ -228,4 +228,114 @@
     text-transform: none;
     font-size: 10px;
   }
+
+  .hamburgerButton {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1010;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+  }
+
+  .drawerOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+
+  .drawer {
+    position: fixed;
+    top: 78px;
+    right: 5%;
+    width: 220px;
+    background-color: rgba(57, 1, 10, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    z-index: 999;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .drawerMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .drawerItem {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--neutral-white);
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .drawerItem:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .drawerSeparator {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 4px 0;
+  }
+
+  .drawerWAButton {
+    background-color: #ffffff;
+    color: var(--primary-red);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+    transition: transform 0.2s var(--ease-elastic), box-shadow var(--transition-fast), background-color var(--transition-fast);
+    text-decoration: none;
+  }
+
+  .drawerWAButton:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.25);
+  }
+
+  .drawerWAButton:active {
+    transform: translateY(0);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.1);
+  }
 }
