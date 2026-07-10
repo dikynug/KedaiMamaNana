@@ -1,0 +1,136 @@
+.beranda {
+  width: 100%;
+  height: 90vh;
+  min-height: 650px;
+  max-height: 850px;
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-red) 0%, #9F031C 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  padding: 80px 8% 0 8%;
+  box-sizing: border-box;
+}
+
+.contentkiri {
+  width: 45%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  animation: LoadText 1.2s var(--ease-premium) both;
+  animation-delay: 0.2s;
+}
+
+@keyframes LoadText {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gambarseblakIcon {
+  width: 48%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  animation: LoadSeblak 1.5s var(--ease-premium) both,
+             float 6s ease-in-out infinite 1.5s;
+}
+
+@keyframes LoadSeblak {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.textBrand {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.kedaiMamaNana {
+  position: relative;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: var(--neutral-white);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.brandIcon {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  margin-left: -12px;
+}
+
+.racikSendiriSeblakmu {
+  position: relative;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.buttonmenu {
+  position: relative;
+  width: fit-content;
+  padding: 0.8rem 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--neutral-white);
+  box-shadow: var(--shadow-sm);
+  border-radius: 12px;
+  color: var(--primary-red);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-elastic),
+              box-shadow var(--transition-fast),
+              background-color var(--transition-fast);
+}
+
+.buttonmenu:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: var(--shadow-md);
+  background-color: var(--neutral-white);
+}
+
+.buttonmenu:active {
+  transform: translateY(-1px) scale(0.97);
+  box-shadow: var(--shadow-sm);
+}

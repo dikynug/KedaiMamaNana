@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Porter+Sans+Block:ital,wght@0,400&display=swap');
+
+:root {
+  --primary-red: #9f031c;
+  --primary-red-hover: #c40a27;
+  --dark-burgundy: #39010a;
+  --neutral-dark: #1a1a1a;
+  --neutral-light: #f5f5f7;
+  --neutral-white: #ffffff;
+  --font-main: 'Poppins', sans-serif;
+  --font-logo: 'Porter Sans Block', sans-serif;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.18);
+  
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-smooth: 0.3s var(--ease-premium);
+  --transition-fast: 0.15s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-red) rgba(0, 0, 0, 0.05);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--neutral-light);
+  color: var(--neutral-dark);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide default scrollbars globally except when needed */
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--primary-red);
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-red-hover);
+}
