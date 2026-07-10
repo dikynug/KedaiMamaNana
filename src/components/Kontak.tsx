@@ -29,20 +29,39 @@ export default function Kontak() {
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.8 }}
       >
-        <div className={styles.jamOperasionalSetiapContainer}>
-          <b>Jam Operasional<br/></b>
-          <span className={styles.ggPuskesmasSido}>Setiap Hari <br/>13.00 - 21.00</span>
+        <div className={styles.kontenMobile}>
+          {/* Column 1: Logo */}
+          <div className={styles.logoCol}>
+            <img className={styles.logoIcon} src={logo} alt="Logo" />
+            <img className={styles.logominiIcon} src={logomini} alt="Logo Mini" />
+          </div>
+
+          {/* Column 2: Jam Operasional & Socials */}
+          <div className={styles.jamopCol}>
+            <div className={styles.jamOperasionalSetiapContainer}>
+              <b>Jam Operasional<br/></b>
+              <span className={styles.ggPuskesmasSido}>Setiap Hari <br/>13.00 - 21.00</span>
+            </div>
+            
+            <div className={styles.socialsMobile}>
+              <div className={styles.socialRow} onClick={openIG}>
+                <img className={styles.instaicon} src={ig} alt="Instagram" />
+                <div className={styles.kedaimamanana}>@kedaimamanana</div>
+              </div>
+              <div className={styles.socialRow} onClick={openWA}>
+                <img className={styles.phoneicon} src={cell} alt="Phone" />
+                <div className={styles.div}>0895 3448 81137</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 3: Alamat */}
+          <div className={styles.alamatCol}>
+            <b>Alamat<br/></b>
+            <span className={styles.ggPuskesmasSido}>Gg. Puskesmas, Sido Mulyo, Kec. Gading Cemp., Kota Bengkulu, Bengkulu 38211</span>
+          </div>
         </div>
-        <div className={styles.alamatGgPuskesmasContainer}>
-          <b>Alamat<br/></b>
-          <span className={styles.ggPuskesmasSido}>Gg. Puskesmas, Sido Mulyo, Kec. Gading Cemp., Kota Bengkulu, Bengkulu 38211</span>
-        </div>
-        <img className={styles.logoIcon} src={logo} alt="Logo" />
-        <div className={styles.kedaimamanana} onClick={openIG}>@kedaimamanana</div>
-        <div className={styles.div} onClick={openWA}>0895 3448 81137</div>
-        <img className={styles.phoneicon} src={cell} alt="Phone" onClick={openWA} />
-        <img className={styles.instaicon} src={ig} alt="Instagram" onClick={openIG} />
-        <img className={styles.logominiIcon} src={logomini} alt="Logo Mini" />
+
         <div className={styles.kedaiMamaNana}>© 2026 Kedai Mama Nana. All rights reserved.</div>
       </motion.div>
     );

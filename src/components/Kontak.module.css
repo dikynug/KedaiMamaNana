@@ -190,109 +190,105 @@
 @media (max-width: 767px) {
   .kontak {
     width: 100%;
-    height: 243px;
+    height: auto;
+    min-height: 243px;
     position: relative;
     background-color: #9f031c;
-    text-align: justify;
+    text-align: left;
     font-size: 8px;
     color: #fff;
     font-family: Poppins;
-    padding: 0;
-    display: block;
-    overflow: hidden;
+    padding: 30px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .kontenMobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    gap: 12px;
+  }
+  .logoCol {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  .logoIcon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+  }
+  .logominiIcon {
+    position: relative;
+    width: 68px;
+    height: auto;
+    object-fit: cover;
+  }
+  .jamopCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
   .jamOperasionalSetiapContainer {
-    position: absolute;
-    top: 41px;
-    left: 201px;
+    position: relative;
     letter-spacing: 0.03em;
-    display: inline-block;
-    width: 86px;
-    height: 47px;
+    display: block;
+    width: auto;
+    height: auto;
   }
-  .alamatGgPuskesmasContainer {
-    position: absolute;
-    top: 41px;
-    left: 295px;
+  .socialsMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .socialRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+  .instaicon, .phoneicon {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  .kedaimamanana, .div {
+    position: relative;
+    font-size: 6px;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+    height: auto;
+  }
+  .alamatCol {
+    position: relative;
     letter-spacing: 0.03em;
     text-align: left;
-    display: inline-block;
-    width: 86px;
-    height: 71px;
+    display: block;
+    width: 85px;
+    height: auto;
   }
   .ggPuskesmasSido {
     font-weight: 500;
   }
-  .logoIcon {
-    position: absolute;
-    top: 42px;
-    left: 5px;
-    width: 51px;
-    height: 51px;
-    object-fit: cover;
-  }
-  .kedaimamanana {
-    position: absolute;
-    top: 75px;
-    left: 215px;
-    font-size: 5px;
-    letter-spacing: 0.03em;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    width: 54px;
-    height: 29px;
-    cursor: pointer;
-  }
-  .div {
-    position: absolute;
-    top: 93px;
-    left: 215px;
-    font-size: 5px;
-    letter-spacing: 0.03em;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    width: 47px;
-    height: 29px;
-    cursor: pointer;
-  }
-  .phoneicon {
-    position: absolute;
-    top: 100px;
-    left: 200px;
-    width: 12px;
-    height: 12px;
-    object-fit: contain;
-    overflow: visible;
-    max-width: unset;
-    max-height: unset;
-    cursor: pointer;
-  }
-  .instaicon {
-    position: absolute;
-    top: 82px;
-    left: 200px;
-    width: 12px;
-    height: 12px;
-    object-fit: contain;
-    overflow: visible;
-    max-width: unset;
-    max-height: unset;
-    cursor: pointer;
-  }
-  .logominiIcon {
-    position: absolute;
-    top: 42px;
-    left: 58px;
-    width: 101px;
-    height: 43px;
-    object-fit: cover;
-  }
   .kedaiMamaNana {
-    position: absolute;
-    top: 201px;
-    left: 0px;
+    position: relative;
+    margin-top: 25px;
     letter-spacing: 0.03em;
     font-weight: 500;
     text-align: center;
@@ -300,7 +296,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 42px;
+    height: auto;
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.6);
   }
 }
 
